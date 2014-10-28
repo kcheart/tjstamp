@@ -67,7 +67,7 @@ class TJStamp
   def put_char char: nil, img: nil, draw: nil, gravity: nil, color: color
     char_image = Magick::Image.new(size, size){ self.background_color = 'none' }
     char_unit_size = size/2 - stroke_width
-    draw.annotate(char_image, 0, 0, 0, 0, char) { self.fill = color }
+    draw.annotate(char_image, 0, 0, 0, 0, char) { self.fill = 'red' }
 
     w, h, x, y = case gravity
     when Magick::NorthWestGravity, Magick::NorthEastGravity, Magick::SouthWestGravity, Magick::SouthEastGravity
